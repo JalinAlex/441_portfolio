@@ -42,25 +42,25 @@
             <p class="title">Enquiry Form</p>
             <div class="Q half">
                 <label for="fname">First Name</label>
-                <input type="text" id="fname">
+                <input type="text" id="fname" required pattern="[A-Za-z]+" title="Please enter letters only">
             </div>
             <div class="Q half">
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname">
+                <input type="text" id="lname" required pattern="[A-Za-z]+" title="Please enter letters only">
             </div>
             <div class="Q half">
                 <label for="email">Email</label>
-                <input type="email" id="email">
+                <input type="email" id="email" required>
             </div>
             <div class="Q half">
                 <label for="phone">Phone</label>
-                <input type="tel" id="phone">
+                <input type="tel" id="phone" required pattern="[0-9]" title="Please enter number from 0-9">
             </div>
 
             <div class="Q full">
                 <label for="type">You enquiry is</label>
-                <select id="type">
-                    <option disabled selected hidden>Please select one</option>
+                <select id="type" required>
+                    <option value="" disabled selected hidden>Please select one</option>
                     <option>Regarding a new course</option>
                     <option>Regarding your current course</option>
                     <option>About enrolling as Apprentice or Trainee</option>
@@ -69,15 +69,15 @@
             </div>
             <div class="Q full">
                 <label for="method">Preferred method of contact</label>
-                <select id="method">
-                    <option disabled selected hidden>Please select one</option>
+                <select id="method" required>
+                    <option value="" disabled selected hidden>Please select one</option>
                     <option>Email</option>
                     <option>Phone</option>
                 </select>
             </div>
             <div class="Q full">
                 <label for="detail">Enquiry detail</label>
-                <textarea rows="7" id="detail"></textarea>
+                <textarea rows="7" id="detail" required></textarea>
             </div>
 
             <input type="submit" value="Submit">
