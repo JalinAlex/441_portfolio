@@ -32,9 +32,11 @@ function getUserInfo738() {
 
         if (usernameInput == username && passwordInput == password) {
             location.assign("shopping.html");
+            setCookie738('isLogin', true, 0.00069);
         }
         else {
             alert('Username or Password entered incorrectly.');
+            setCookie738('isLogin', false, 0.00069);
         }
     } else {
         alert('Username cookie or Password cookie not found.');
@@ -57,6 +59,11 @@ function getCookie738(cookieName) {
     return "";
 }
 
+function checkLogin738(){
+    if(!getCookie738('isLogin') || getCookie738('isLogin')== ""){
+        location.assign("login.html");
+    }
+}
 
 
 //Shopping cart code
